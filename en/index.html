@@ -676,12 +676,13 @@ footer a:hover{color:rgba(239,234,228,.9)}
           </div>
         </div>
         <div class="cf-field">
-          <label class="cf-label" for="cf-phone">Telefon</label>
-          <input class="cf-input" id="cf-phone" type="tel" name="phone" autocomplete="tel" placeholder="+420 000 000 000">
+          <label class="cf-label" for="cf-phone">Telefon<span class="required-star" aria-hidden="true">*</span></label>
+          <input class="cf-input" id="cf-phone" type="tel" name="phone" required autocomplete="tel" placeholder="+420 000 000 000" aria-required="true">
+            <span class="field-error">Please enter your phone number</span>
         </div>
         <div class="cf-field">
-          <label class="cf-label" for="cf-product">Product type</label>
-          <select class="cf-select" id="cf-product" name="product" aria-label="Select product type">
+          <label class="cf-label" for="cf-product">Product type<span class="required-star" aria-hidden="true">*</span></label>
+          <select class="cf-select" id="cf-product" name="product" required aria-label="Select product type" aria-required="true">
             <option value="">Select product type</option>
             <option value="miska">Bowl / Vessel</option>
             <option value="mlynek">Spice mill</option>
@@ -818,7 +819,8 @@ document.getElementById('contactForm').addEventListener('submit',async e=>{
   const fields=[
     {id:'cf-name', check:v=>v.trim().length>=2},
     {id:'cf-email', check:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)},
-    {id:'cf-message', check:v=>v.trim().length>=10}
+    {id:'cf-phone', check:v=>v.trim().length>=9},
+    {id:'cf-product', check:v=>v!==''}
   ];
   fields.forEach(({id,check})=>{
     const el=document.getElementById(id);
