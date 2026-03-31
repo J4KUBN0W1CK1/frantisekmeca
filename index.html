@@ -676,12 +676,13 @@ footer a:hover{color:rgba(239,234,228,.9)}
           </div>
         </div>
         <div class="cf-field">
-          <label class="cf-label" for="cf-phone">Telefon</label>
-          <input class="cf-input" id="cf-phone" type="tel" name="phone" autocomplete="tel" placeholder="+420 000 000 000">
+          <label class="cf-label" for="cf-phone">Telefon<span class="required-star" aria-hidden="true">*</span></label>
+          <input class="cf-input" id="cf-phone" type="tel" name="phone" required autocomplete="tel" placeholder="+420 000 000 000" aria-required="true">
+            <span class="field-error">Vyplňte prosím telefon</span>
         </div>
         <div class="cf-field">
-          <label class="cf-label" for="cf-product">Typ výrobku</label>
-          <select class="cf-select" id="cf-product" name="product" aria-label="Vyberte typ výrobku">
+          <label class="cf-label" for="cf-product">Typ výrobku<span class="required-star" aria-hidden="true">*</span></label>
+          <select class="cf-select" id="cf-product" name="product" required aria-label="Vyberte typ výrobku" aria-required="true">
             <option value="">Vyberte typ výrobku</option>
             <option value="miska">Miska / Mísa</option>
             <option value="mlynek">Mlýnek na koření</option>
@@ -818,7 +819,8 @@ document.getElementById('contactForm').addEventListener('submit',async e=>{
   const fields=[
     {id:'cf-name', check:v=>v.trim().length>=2},
     {id:'cf-email', check:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)},
-    {id:'cf-message', check:v=>v.trim().length>=10}
+    {id:'cf-phone', check:v=>v.trim().length>=9},
+    {id:'cf-product', check:v=>v!==''}
   ];
   fields.forEach(({id,check})=>{
     const el=document.getElementById(id);
