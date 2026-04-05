@@ -128,7 +128,7 @@
             "itemOffered": {
               "@type": "Product",
               "name": "Spice mills",
-              "description": "Funkční dřevěné mlýnky s kovovým mechanismem. Sůl, pepř, koření. Možnost gravírování monogramů.",
+              "description": "Pepper and salt mills with CrushGrind Diamond mechanism featuring ceramic grinding. These unique mechanisms come with a 25-year warranty and are excellent for grinding salt and pepper. Adjustable to 14 levels – from coarse to fine. Made from solid oak, handcrafted – each piece is one of a kind. Height 25 cm, made to order.",
               "category": "Kuchyňské doplňky",
               "brand": {"@type": "Brand", "name": "Creative Woodturning"},
               "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "12", "bestRating": "5", "worstRating": "1"},
@@ -258,7 +258,7 @@ section{padding:clamp(70px,10vw,110px) clamp(4%,6vw,6%)}
 .btn-outline{color:var(--br);border:1px solid var(--br);padding:10px 24px;text-decoration:none;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;border-radius:1px;transition:all .2s}
 .btn-outline:hover{background:var(--br);color:white}
 .products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--bd)}@media(max-width:900px){.products-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.products-grid{grid-template-columns:1fr}}
-.prod-card{background:var(--cr-l);overflow:hidden;opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s;min-width:0;width:100%}
+.prod-card{background:var(--cr-l);overflow:hidden;opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s;min-width:0;width:100%;display:flex;flex-direction:column}
 .prod-card.vis{opacity:1;transform:translateY(0)}
 .prod-card:nth-child(2){transition-delay:.09s}
 .prod-card:nth-child(3){transition-delay:.15s}
@@ -267,10 +267,10 @@ section{padding:clamp(70px,10vw,110px) clamp(4%,6vw,6%)}
 .prod-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s;display:block}
 .prod-card:hover .prod-img-wrap img{transform:scale(1.04)}
 .mto{position:absolute;top:1rem;right:1rem;background:rgba(42,28,18,.78);color:rgba(239,234,228,.92);font-size:.57rem;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border-radius:1px;backdrop-filter:blur(6px)}
-.prod-info{padding:1.6rem 2rem 2rem;border-top:1px solid var(--bd)}
+.prod-info{padding:1.6rem 2rem 2rem;border-top:1px solid var(--bd);flex:1;display:flex;flex-direction:column}
 .prod-name{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:500;color:var(--br-d);margin-bottom:.35rem}
 .prod-desc{font-size:.82rem;color:var(--tx-m);line-height:1.74;margin-bottom:.85rem}
-.prod-price{font-size:.7rem;letter-spacing:.09em;color:var(--br);font-weight:500;text-transform:uppercase}
+.prod-price{font-size:.7rem;letter-spacing:.09em;color:var(--br);font-weight:500;text-transform:uppercase;margin-top:auto}
 
 /* ── PROCESS ── */
 .process-section{padding:0;background:var(--br-xd);position:relative;overflow:hidden}
@@ -542,7 +542,7 @@ footer a:hover{color:rgba(239,234,228,.9)}
       </div>
       <div class="prod-info">
         <h3 class="prod-name" itemprop="name">Spice Mills</h3>
-        <p class="prod-desc" itemprop="description">Functional mills with a metal mechanism, in wood of your choice. Salt, pepper, other spices. Engraving of monograms and names available.</p>
+        <p class="prod-desc" itemprop="description">Pepper and salt mills with CrushGrind Diamond mechanism featuring ceramic grinding. These unique mechanisms come with a 25-year warranty and are excellent for grinding salt and pepper. Adjustable to 14 levels – from coarse to fine. Made from solid oak, handcrafted – each piece is one of a kind. Height 25 cm, made to order.</p>
         <p class="prod-price"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="900">from 900 CZK</span><meta itemprop="priceCurrency" content="CZK"><link itemprop="availability" href="https://schema.org/InStock"></span></p>
       </div>
     </article>
