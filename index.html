@@ -342,7 +342,7 @@ section{padding:clamp(70px,10vw,110px) clamp(4%,6vw,6%)}
 .social-row{display:flex;gap:.6rem;margin-top:.7rem}
 .s-link{width:44px;height:44px;border:1px solid var(--bd);background:var(--cr-l);display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--br);transition:all .2s;flex-shrink:0}
 .s-link:hover{background:var(--br);color:white;border-color:var(--br)}
-.contact-form{display:flex;flex-direction:column;gap:.85rem}
+.contact-form-col{padding-top:2.1rem}.contact-form{display:flex;flex-direction:column;gap:.85rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
 .cf-field{display:flex;flex-direction:column;gap:.32rem}
 .cf-label{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-m)}
@@ -394,7 +394,7 @@ footer a:hover{color:rgba(239,234,228,.9)}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-  .about-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}.contact-form-col{padding-top:0}
   .about-imgs{padding-bottom:1.5rem;padding-right:1.5rem}
   .about-img-main{aspect-ratio:4/3}
   .about-img-accent{width:clamp(90px,28%,160px);bottom:0;right:0;border-width:3px}
@@ -660,7 +660,7 @@ footer a:hover{color:rgba(239,234,228,.9)}
       </div>
     </div>
 
-    <div class="fu">
+    <div class="fu contact-form-col">
       <form class="contact-form" id="contactForm" aria-label="Poptávkový formulář">
         <input type="hidden" name="access_key" value="6635e72e-79e6-4c19-a465-7f4e9ad29930">
         <input type="hidden" name="subject" value="Nová poptávka – frantisekmeca.cz">
