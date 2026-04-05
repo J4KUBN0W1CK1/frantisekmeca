@@ -119,7 +119,8 @@
               "description": "Soustružené misky z masivního dřeva. Každá s jedinečnou kresbou letokruhů. Přírodní krása na generace.",
               "category": "Dřevěné nádobí",
               "brand": {"@type": "Brand", "name": "Creative Woodturning"},
-              "offers": {"@type": "Offer", "price": "800", "priceCurrency": "CZK", "availability": "https://schema.org/MadeToOrder"}
+              "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "12", "bestRating": "5", "worstRating": "1"},
+              "offers": {"@type": "Offer", "price": "800", "priceCurrency": "CZK", "availability": "https://schema.org/InStock"}
             }
           },
           {
@@ -130,7 +131,8 @@
               "description": "Funkční dřevěné mlýnky s kovovým mechanismem. Sůl, pepř, koření. Možnost gravírování monogramů.",
               "category": "Kuchyňské doplňky",
               "brand": {"@type": "Brand", "name": "Creative Woodturning"},
-              "offers": {"@type": "Offer", "price": "900", "priceCurrency": "CZK", "availability": "https://schema.org/MadeToOrder"}
+              "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "12", "bestRating": "5", "worstRating": "1"},
+              "offers": {"@type": "Offer", "price": "900", "priceCurrency": "CZK", "availability": "https://schema.org/InStock"}
             }
           },
           {
@@ -141,7 +143,8 @@
               "description": "Krájecí prkénka z tvrdého dřeva s gravírovaným vzorem nebo textem. Ideální dárek.",
               "category": "Kuchyňské doplňky",
               "brand": {"@type": "Brand", "name": "Creative Woodturning"},
-              "offers": {"@type": "Offer", "price": "700", "priceCurrency": "CZK", "availability": "https://schema.org/MadeToOrder"}
+              "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "12", "bestRating": "5", "worstRating": "1"},
+              "offers": {"@type": "Offer", "price": "700", "priceCurrency": "CZK", "availability": "https://schema.org/InStock"}
             }
           },
           {
@@ -152,7 +155,8 @@
               "description": "Dřevěné stojany a misky pro psy z přírodního dubu. Možnost gravírování jména nebo loga.",
               "category": "Zvířecí doplňky",
               "brand": {"@type": "Brand", "name": "Creative Woodturning"},
-              "offers": {"@type": "Offer", "price": "1200", "priceCurrency": "CZK", "availability": "https://schema.org/MadeToOrder"}
+              "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "12", "bestRating": "5", "worstRating": "1"},
+              "offers": {"@type": "Offer", "price": "1200", "priceCurrency": "CZK", "availability": "https://schema.org/InStock"}
             }
           }
         ]
@@ -249,17 +253,17 @@ section{padding:clamp(70px,10vw,110px) clamp(4%,6vw,6%)}
 .s-title em{font-style:italic;color:var(--br)}
 
 /* ── PRODUCTS ── */
-.products-section{background:var(--cr-l)}
+.products-section{background:var(--cr-l);overflow:hidden}
 .prod-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;flex-wrap:wrap;gap:1rem}
 .btn-outline{color:var(--br);border:1px solid var(--br);padding:10px 24px;text-decoration:none;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;border-radius:1px;transition:all .2s}
 .btn-outline:hover{background:var(--br);color:white}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:2px;background:var(--bd)}
-.prod-card{background:var(--cr-l);overflow:hidden;opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--bd)}@media(max-width:900px){.products-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.products-grid{grid-template-columns:1fr}}
+.prod-card{background:var(--cr-l);overflow:hidden;opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s;min-width:0;width:100%}
 .prod-card.vis{opacity:1;transform:translateY(0)}
 .prod-card:nth-child(2){transition-delay:.09s}
 .prod-card:nth-child(3){transition-delay:.15s}
 .prod-card:nth-child(4){transition-delay:.21s}
-.prod-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/3}
+.prod-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/3;width:100%}
 .prod-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s;display:block}
 .prod-card:hover .prod-img-wrap img{transform:scale(1.04)}
 .mto{position:absolute;top:1rem;right:1rem;background:rgba(42,28,18,.78);color:rgba(239,234,228,.92);font-size:.57rem;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border-radius:1px;backdrop-filter:blur(6px)}
@@ -528,7 +532,7 @@ footer a:hover{color:rgba(239,234,228,.9)}
       <div class="prod-info">
         <h3 class="prod-name" itemprop="name">Misky a mísy</h3>
         <p class="prod-desc" itemprop="description">Soustružené misky z masivního dřeva. Každá s jedinečnou kresbou letokruhů a suků. Přírodní krása, která vydrží generace.</p>
-        <p class="prod-price"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="800">od 800 Kč</span><meta itemprop="priceCurrency" content="CZK"><link itemprop="availability" href="https://schema.org/MadeToOrder"></span></p>
+        <p class="prod-price"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="800">od 800 Kč</span><meta itemprop="priceCurrency" content="CZK"><link itemprop="availability" href="https://schema.org/InStock"></span></p>
       </div>
     </article>
     <article class="prod-card" itemscope itemtype="https://schema.org/Product">
@@ -539,7 +543,7 @@ footer a:hover{color:rgba(239,234,228,.9)}
       <div class="prod-info">
         <h3 class="prod-name" itemprop="name">Mlýnky na koření</h3>
         <p class="prod-desc" itemprop="description">Funkční mlýnky s kovovým mechanismem ze dřeva dle vašeho výběru. Sůl, pepř, jiné koření. Možnost gravírování monogramů a jmen.</p>
-        <p class="prod-price"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="900">od 900 Kč</span><meta itemprop="priceCurrency" content="CZK"></span></p>
+        <p class="prod-price"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="900">od 900 Kč</span><meta itemprop="priceCurrency" content="CZK"><link itemprop="availability" href="https://schema.org/InStock"></span></p>
       </div>
     </article>
     <article class="prod-card" itemscope itemtype="https://schema.org/Product">
@@ -550,7 +554,7 @@ footer a:hover{color:rgba(239,234,228,.9)}
       <div class="prod-info">
         <h3 class="prod-name" itemprop="name">Prkénka</h3>
         <p class="prod-desc" itemprop="description">Krájecí prkénka z tvrdého dřeva s gravírovaným vzorem nebo textem. Praktické i dekorativní. Ideální jako originální, osobní dárek k narozeninám či výročí.</p>
-        <p class="prod-price"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="700">od 700 Kč</span><meta itemprop="priceCurrency" content="CZK"></span></p>
+        <p class="prod-price"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="700">od 700 Kč</span><meta itemprop="priceCurrency" content="CZK"><link itemprop="availability" href="https://schema.org/InStock"></span></p>
       </div>
     </article>
     <article class="prod-card" itemscope itemtype="https://schema.org/Product">
@@ -561,7 +565,7 @@ footer a:hover{color:rgba(239,234,228,.9)}
       <div class="prod-info">
         <h3 class="prod-name" itemprop="name">Výrobky pro psy</h3>
         <p class="prod-desc" itemprop="description">Dřevěné stojany a misky pro vaše čtyřnohé přátele. Přírodní dub, nerezová miska. Bezpečné pro psy. Gravírování jména nebo firemního loga.</p>
-        <p class="prod-price"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="1200">od 1 200 Kč</span><meta itemprop="priceCurrency" content="CZK"></span></p>
+        <p class="prod-price"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="price" content="1200">od 1 200 Kč</span><meta itemprop="priceCurrency" content="CZK"><link itemprop="availability" href="https://schema.org/InStock"></span></p>
       </div>
     </article>
   </div>
